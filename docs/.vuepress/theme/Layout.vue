@@ -29,15 +29,25 @@
         <div class="sponsors sponsors-top">
           <span>Platinum Sponsors</span>
 
+          <template v-if="sponsors.platinum.length">
+            <a
+              v-for="sponsor in sponsors.platinum"
+              :href="sponsor.href"
+              :key="sponsor.href"
+              target="_blank"
+              rel="noopener"
+            >
+              <img :src="sponsor.imgSrcLight" :alt="sponsor.alt" />
+            </a>
+          </template>
           <a
-            v-for="sponsor in sponsors.platinum"
-            :href="sponsor.href"
-            :key="sponsor.href"
+            v-else
+            class="become-sponsor"
+            href="https://github.com/sponsors/posva"
             target="_blank"
             rel="noopener"
-          >
-            <img :src="sponsor.imgSrcLight" :alt="sponsor.alt" />
-          </a>
+            alt="Your logo here"
+          >Become a Sponsor!</a>
         </div>
       </template>
 
@@ -81,12 +91,14 @@ export default {
     }
   },
   mounted () {
-    this.showTopBanner = !localStorage.getItem('VS_BF21_BANNER_CLOSED')
+    const now = new Date()
+    const end = new Date('2022-05-04T00:00:00+02:00')
+    this.showTopBanner = !localStorage.getItem('VS_FW_22_BANNER_CLOSED') && (now < end)
   },
   methods: {
     closeBannerTop () {
       this.showTopBanner = false
-      localStorage.setItem('VS_BF21_BANNER_CLOSED', 1)
+      localStorage.setItem('VS_FW_22_BANNER_CLOSED', 1)
     }
   }
 }
@@ -95,7 +107,7 @@ export default {
 <style>
 @media screen and (max-width: 1300px) {
   .content__default::before {
-    content: '';
+    content: "";
     /* background-color: red; */
     position: relative;
     display: block;
