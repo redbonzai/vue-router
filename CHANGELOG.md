@@ -1,11 +1,63 @@
-## [3.5.4](https://github.com/vuejs/vue-router/compare/v3.5.3...v3.5.4) (2022-05-16)
-
+## [3.6.5](https://github.com/vuejs/vue-router/compare/v3.6.4...v3.6.5) (2022-09-06)
 
 ### Bug Fixes
 
-* remove whitespace between mulitple slashes ([86d7f1f](https://github.com/vuejs/vue-router/commit/86d7f1fdaa36432f6564309925690ec20bb2981e)), closes [#3743](https://github.com/vuejs/vue-router/issues/3743)
+- **types:** Component with 4 generics for Vue 2.6 ([d6064df](https://github.com/vuejs/vue-router/commit/d6064df1112497dac98e4302d81607efdb1a58c6)), closes [#3786](https://github.com/vuejs/vue-router/issues/3786)
 
+## [3.6.4](https://github.com/vuejs/vue-router/compare/v3.6.3...v3.6.4) (2022-08-25)
 
+This release fixes some compatibility issues of the new `vue-router/composables` with webpack 4.
+
+### Features
+
+- **types:** add composables.d.ts in root ([#3784](https://github.com/vuejs/vue-router/issues/3784)) ([0cf54de](https://github.com/vuejs/vue-router/commit/0cf54de782a0b05692bbe78a7181495b6a35b8d9))
+
+## [3.6.3](https://github.com/vuejs/vue-router/compare/v3.6.2...v3.6.3) (2022-08-23)
+
+### Bug Fixes
+
+- **build:** export all named exports esm build ([a6647c8](https://github.com/vuejs/vue-router/commit/a6647c8c3d7022f1b702935461c7d234b052ca06))
+- **types:** allow jsx components ([0cb86b3](https://github.com/vuejs/vue-router/commit/0cb86b3865b713201f9db49c7a8d23e9a2876f29)), closes [#3776](https://github.com/vuejs/vue-router/issues/3776)
+- **types:** missing NavigationFailureType and isNavigationFailure ([#3777](https://github.com/vuejs/vue-router/issues/3777)) ([9d001dd](https://github.com/vuejs/vue-router/commit/9d001dd0bebdea1e1a8ec2f0c77113b6a2e2b6a3))
+
+## [3.6.2](https://github.com/vuejs/vue-router/compare/v3.6.1...v3.6.2) (2022-08-23)
+
+### Bug Fixes
+
+- **build:** add mjs build ([b4c3940](https://github.com/vuejs/vue-router/commit/b4c39404eff7ae2f657c405d7b0f939ce20cfdec))
+- **types:** missing start location ([1356acb](https://github.com/vuejs/vue-router/commit/1356acb983c5eccb00c5c0ec3f406218ae49a8c1))
+
+## [3.6.1](https://github.com/vuejs/vue-router/compare/v3.6.0...v3.6.1) (2022-08-23)
+
+### Bug Fixes
+
+- **build:** ensure install fn before Vue.use ([0126bcb](https://github.com/vuejs/vue-router/commit/0126bcbfb0e3cb824bfce05090ca018faf02ce5e)), closes [#3772](https://github.com/vuejs/vue-router/issues/3772)
+
+# [3.6.0](https://github.com/vuejs/vue-router/compare/v3.5.4...v3.6.0) (2022-08-22)
+
+This release of Vue Router introduces composables from Vue Router 4:
+
+```js
+import { useRoute, useRouter, useLink, onBeforeRouteUpdate onBeforeRouteLeave } from 'vue-router/composables'
+```
+
+Since these composables **require Vue 2.7**, they are only exposed under `vue-router/composables` submodule, so it shouldn't affect you if you stay on Vue 2.6 (Note there are no new features or fixes besides the composables in this release). Refer to [the Vue Router 4 API documentation](https://router.vuejs.org/api/#onbeforerouteleave) for details on the composables.
+
+### Features
+
+- **types:** useLink() ([77bd0e3](https://github.com/vuejs/vue-router/commit/77bd0e317dd5a9aebfca515f0f28f3284c7d8260))
+- useLink() ([50332e5](https://github.com/vuejs/vue-router/commit/50332e5e93e6aa1194a9e68a60937a6f9e8bcecd))
+- **types:** expose RouterLink and RouterView in d.ts ([cad978a](https://github.com/vuejs/vue-router/commit/cad978a832174aac59cad86fe780f8a64a9754d7))
+- add RouterLink and RouterView to esm ([4511f39](https://github.com/vuejs/vue-router/commit/4511f393334247c9702ed378220bf925cdc09add))
+- add vue 2.7 types ([cba9650](https://github.com/vuejs/vue-router/commit/cba9650e5cbf958c1db9cd259a2e7bfbc28bddbe))
+- onBeforeRouteUpdate onBeforeRouteLeave ([9861c55](https://github.com/vuejs/vue-router/commit/9861c553627f5f34a07ad3ac28e2ed02aab99d47))
+- useRoute and useRouter ([ea35594](https://github.com/vuejs/vue-router/commit/ea355943e097914ae55fa54ccb7df929c901e80d))
+
+## [3.5.4](https://github.com/vuejs/vue-router/compare/v3.5.3...v3.5.4) (2022-05-16)
+
+### Bug Fixes
+
+- remove whitespace between mulitple slashes ([86d7f1f](https://github.com/vuejs/vue-router/commit/86d7f1fdaa36432f6564309925690ec20bb2981e)), closes [#3743](https://github.com/vuejs/vue-router/issues/3743)
 
 ## [3.5.3](https://github.com/vuejs/vue-router/compare/v3.5.2...v3.5.3) (2021-10-26)
 
