@@ -71,25 +71,25 @@ Vue Router is part of the Vue Ecosystem and is an MIT-licensed open source proje
 
 ---
 
-Get started with the [documentation](http://router.vuejs.org), or play with the [examples](https://github.com/vuejs/vue-router/tree/dev/examples) (see how to run them below).
+Get started with the [documentation](http://v3.router.vuejs.org), or play with the [examples](https://github.com/vuejs/vue-router/tree/dev/examples) (see how to run them below).
 
 ### Development Setup
 
 ```bash
 # install deps
-npm install
+yarn
 
 # build dist files
-npm run build
+yarn build
 
 # serve examples at localhost:8080
-npm run dev
+yarn dev
 
 # lint & run all tests
-npm test
+yarn test
 
 # serve docs at localhost:8080
-npm run docs
+yarn docs
 ```
 
 ## Releasing
